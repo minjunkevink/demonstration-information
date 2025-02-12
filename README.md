@@ -1,6 +1,6 @@
 # Demonstration Information Estimation
 
-This repository contains code accompanying the paper [Robot Data Curation with Mutual Information Estimators](https://jhejna.github.io/demonstration-information) by Joey Hejna, Suvir Mirchandani, Ashwin Balakrishna, Annie Xie, Ayzaan Wahid, Jonathan Tompson, Pannag Sanketi, Dhruv Shah, Coline Devin, and Dorsa Sadigh.
+This repository contains code accompanying the paper [Robot Data Curation with Mutual Information Estimators](https://jhejna.github.io/demonstration-info) by Joey Hejna, Suvir Mirchandani, Ashwin Balakrishna, Annie Xie, Ayzaan Wahid, Jonathan Tompson, Pannag Sanketi, Dhruv Shah, Coline Devin, and Dorsa Sadigh.
 
 This codebase is based off of a frozen version of the [OpenX repository primarily](https://github.com/jhejna/openx) developed by [Joey Hejna](https://jhejna.github.io) for training robot models using Jax, Flax, and RLDS. We build upon ideas used in the [Octo repository](https://github.com/octo-models/octo).
 
