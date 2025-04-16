@@ -4,6 +4,8 @@ This repository contains code accompanying the paper [Robot Data Curation with M
 
 This codebase is based off of a frozen version of the [OpenX repository primarily](https://github.com/jhejna/openx) developed by [Joey Hejna](https://jhejna.github.io) for training robot models using Jax, Flax, and RLDS. We build upon ideas used in the [Octo repository](https://github.com/octo-models/octo).
 
+**NOTE: We find that DemInf works best with relative actions. When using your own datasets, we recommend trying relative actions to get stronger results.**
+
 ## Installation
 First, create a conda environment with python 3.11, and then install requirements and this repo.
 ```
