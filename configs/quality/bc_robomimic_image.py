@@ -59,6 +59,7 @@ def get_config(config_str="square/mh,1"):
         n_action=1,
         shuffle_size=100000,
         batch_size=256,
+        augment_kwargs=dict(scale_range=(0.85, 1.0), aspect_ratio_range=None),
         recompute_statistics=False,  # Small, just recompute.
         cache=True,  # Small enough to stay in memory
         prefetch=tf.data.AUTOTUNE,  # Enable prefetch.

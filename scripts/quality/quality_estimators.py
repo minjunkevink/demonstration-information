@@ -135,7 +135,7 @@ def compatibility_estimator(batch, rng, alg, state):
     loss = jnp.sum(loss * batch["mask"], axis=-1) / (jnp.sum(batch["mask"], axis=-1))
     eta = 0.05
     lambd = 4
-    return jnp.where(stddev < eta, 1 - jnp.minimum(loss / lambd, 1.0), loss)
+    return jnp.where(stddev < eta, 1 - jnp.minimum(loss / lambd, 1.0), 1.0)
 
 
 def random_estimator(batch, rng):
