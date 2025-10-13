@@ -1,0 +1,30 @@
+{
+  "citation": "@inproceedings{robomimic2021,\n  title={What Matters in Learning from Offline Human Demonstrations for Robot Manipulation},\n  author={Ajay Mandlekar and Danfei Xu and Josiah Wong and Soroush Nasiriany and Chen Wang and Rohun Kulkarni and Li Fei-Fei and Silvio Savarese and Yuke Zhu and Roberto Mart\\'{i}n-Mart\\'{i}n},\n  booktitle={arXiv preprint arXiv:2108.03298},\n  year={2021}\n}",
+  "description": "# Robomimic Dataset\n\nA simple example for creating RLDS datasets using the robot-lightning package. This is taken from the [RLDS builder repo](https://github.com/kpertsch/rlds_dataset_builder) by Karl Pertsch.\n\nTo build the dataset, `cd` into its folder then run `tfds build --manual_dir /path/to/robomimic/task/dir/ --data_dir /path/to/dataset/output`.",
+  "fileFormat": "tfrecord",
+  "moduleName": "robomimic.robomimic_dataset_builder",
+  "name": "robo_mimic",
+  "releaseNotes": {
+    "1.0.0": "Initial release."
+  },
+  "splits": [
+    {
+      "filepathTemplate": "{DATASET}-{SPLIT}.{FILEFORMAT}-{SHARD_X_OF_Y}",
+      "name": "train",
+      "numBytes": "184138875",
+      "shardLengths": [
+        "90",
+        "90"
+      ]
+    },
+    {
+      "filepathTemplate": "{DATASET}-{SPLIT}.{FILEFORMAT}-{SHARD_X_OF_Y}",
+      "name": "val",
+      "numBytes": "20477921",
+      "shardLengths": [
+        "20"
+      ]
+    }
+  ],
+  "version": "1.0.0"
+}

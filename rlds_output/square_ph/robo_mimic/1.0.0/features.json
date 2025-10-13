@@ -1,0 +1,240 @@
+{
+    "featuresDict": {
+        "features": {
+            "episode_metadata": {
+                "featuresDict": {
+                    "features": {
+                        "ep_idx": {
+                            "description": "Detemrinistic index of the episode.",
+                            "pythonClassName": "tensorflow_datasets.core.features.scalar.Scalar",
+                            "tensor": {
+                                "dtype": "int32",
+                                "encoding": "none",
+                                "shape": {}
+                            }
+                        },
+                        "file_path": {
+                            "description": "Path to the original data file.",
+                            "pythonClassName": "tensorflow_datasets.core.features.text_feature.Text",
+                            "text": {}
+                        },
+                        "operator": {
+                            "description": "The operator, is '' if not present.",
+                            "pythonClassName": "tensorflow_datasets.core.features.text_feature.Text",
+                            "text": {}
+                        },
+                        "quality_score": {
+                            "description": "A quality score, is inf if not present",
+                            "pythonClassName": "tensorflow_datasets.core.features.scalar.Scalar",
+                            "tensor": {
+                                "dtype": "float32",
+                                "encoding": "none",
+                                "shape": {}
+                            }
+                        }
+                    }
+                },
+                "pythonClassName": "tensorflow_datasets.core.features.features_dict.FeaturesDict"
+            },
+            "steps": {
+                "pythonClassName": "tensorflow_datasets.core.features.dataset_feature.Dataset",
+                "sequence": {
+                    "feature": {
+                        "featuresDict": {
+                            "features": {
+                                "action": {
+                                    "description": "Robot EEF action.",
+                                    "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+                                    "tensor": {
+                                        "dtype": "float32",
+                                        "encoding": "none",
+                                        "shape": {
+                                            "dimensions": [
+                                                "7"
+                                            ]
+                                        }
+                                    }
+                                },
+                                "discount": {
+                                    "description": "Discount if provided, default to 1.",
+                                    "pythonClassName": "tensorflow_datasets.core.features.scalar.Scalar",
+                                    "tensor": {
+                                        "dtype": "float32",
+                                        "encoding": "none",
+                                        "shape": {}
+                                    }
+                                },
+                                "is_first": {
+                                    "description": "True on first step of the episode.",
+                                    "pythonClassName": "tensorflow_datasets.core.features.scalar.Scalar",
+                                    "tensor": {
+                                        "dtype": "bool",
+                                        "encoding": "none",
+                                        "shape": {}
+                                    }
+                                },
+                                "is_last": {
+                                    "description": "True on last step of the episode.",
+                                    "pythonClassName": "tensorflow_datasets.core.features.scalar.Scalar",
+                                    "tensor": {
+                                        "dtype": "bool",
+                                        "encoding": "none",
+                                        "shape": {}
+                                    }
+                                },
+                                "is_terminal": {
+                                    "description": "True on last step of the episode if it is a terminal step, True for demos.",
+                                    "pythonClassName": "tensorflow_datasets.core.features.scalar.Scalar",
+                                    "tensor": {
+                                        "dtype": "bool",
+                                        "encoding": "none",
+                                        "shape": {}
+                                    }
+                                },
+                                "language_instruction": {
+                                    "description": "Language Instruction.",
+                                    "pythonClassName": "tensorflow_datasets.core.features.text_feature.Text",
+                                    "text": {}
+                                },
+                                "observation": {
+                                    "featuresDict": {
+                                        "features": {
+                                            "agent_image": {
+                                                "description": "Main camera RGB observation.",
+                                                "image": {
+                                                    "dtype": "uint8",
+                                                    "encodingFormat": "jpeg",
+                                                    "shape": {
+                                                        "dimensions": [
+                                                            "84",
+                                                            "84",
+                                                            "3"
+                                                        ]
+                                                    }
+                                                },
+                                                "pythonClassName": "tensorflow_datasets.core.features.image_feature.Image"
+                                            },
+                                            "state": {
+                                                "featuresDict": {
+                                                    "features": {
+                                                        "ee_pos": {
+                                                            "description": "Robot EEF Position",
+                                                            "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+                                                            "tensor": {
+                                                                "dtype": "float32",
+                                                                "encoding": "none",
+                                                                "shape": {
+                                                                    "dimensions": [
+                                                                        "3"
+                                                                    ]
+                                                                }
+                                                            }
+                                                        },
+                                                        "ee_quat": {
+                                                            "description": "Robot EEF Quat",
+                                                            "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+                                                            "tensor": {
+                                                                "dtype": "float32",
+                                                                "encoding": "none",
+                                                                "shape": {
+                                                                    "dimensions": [
+                                                                        "4"
+                                                                    ]
+                                                                }
+                                                            }
+                                                        },
+                                                        "gripper_qpos": {
+                                                            "description": "Robot EEF Quat",
+                                                            "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+                                                            "tensor": {
+                                                                "dtype": "float32",
+                                                                "encoding": "none",
+                                                                "shape": {
+                                                                    "dimensions": [
+                                                                        "2"
+                                                                    ]
+                                                                }
+                                                            }
+                                                        },
+                                                        "joint_pos": {
+                                                            "description": "Robot joint angles.",
+                                                            "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+                                                            "tensor": {
+                                                                "dtype": "float32",
+                                                                "encoding": "none",
+                                                                "shape": {
+                                                                    "dimensions": [
+                                                                        "7"
+                                                                    ]
+                                                                }
+                                                            }
+                                                        },
+                                                        "joint_vel": {
+                                                            "description": "Robot joint angles.",
+                                                            "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+                                                            "tensor": {
+                                                                "dtype": "float32",
+                                                                "encoding": "none",
+                                                                "shape": {
+                                                                    "dimensions": [
+                                                                        "7"
+                                                                    ]
+                                                                }
+                                                            }
+                                                        },
+                                                        "object": {
+                                                            "description": "Ground truth object position.",
+                                                            "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+                                                            "tensor": {
+                                                                "dtype": "float32",
+                                                                "encoding": "none",
+                                                                "shape": {
+                                                                    "dimensions": [
+                                                                        "44"
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "pythonClassName": "tensorflow_datasets.core.features.features_dict.FeaturesDict"
+                                            },
+                                            "wrist_image": {
+                                                "description": "Wrist camera RGB observation.",
+                                                "image": {
+                                                    "dtype": "uint8",
+                                                    "encodingFormat": "jpeg",
+                                                    "shape": {
+                                                        "dimensions": [
+                                                            "84",
+                                                            "84",
+                                                            "3"
+                                                        ]
+                                                    }
+                                                },
+                                                "pythonClassName": "tensorflow_datasets.core.features.image_feature.Image"
+                                            }
+                                        }
+                                    },
+                                    "pythonClassName": "tensorflow_datasets.core.features.features_dict.FeaturesDict"
+                                },
+                                "reward": {
+                                    "description": "Reward if provided, 1 on final step for demos.",
+                                    "pythonClassName": "tensorflow_datasets.core.features.scalar.Scalar",
+                                    "tensor": {
+                                        "dtype": "float32",
+                                        "encoding": "none",
+                                        "shape": {}
+                                    }
+                                }
+                            }
+                        },
+                        "pythonClassName": "tensorflow_datasets.core.features.features_dict.FeaturesDict"
+                    },
+                    "length": "-1"
+                }
+            }
+        }
+    },
+    "pythonClassName": "tensorflow_datasets.core.features.features_dict.FeaturesDict"
+}
